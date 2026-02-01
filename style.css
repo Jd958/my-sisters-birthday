@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f3e8ff;
+  color: #3b0764;
+  overflow: hidden;
+}
+
+/* PAGES */
+.page {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.page.active {
+  display: flex;
+}
+
+/* COUNTDOWN */
+#countdown {
+  font-size: 96px;
+  font-weight: bold;
+}
+
+/* TEXT */
+h1 { font-size: 42px; }
+h2 { font-size: 26px; font-weight: normal; }
+h3 { font-size: 18px; max-width: 320px; }
+
+/* BUTTONS */
+button {
+  margin-top: 20px;
+  padding: 14px 34px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background: #7c3aed;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+/* MAIL */
+#mailIcon {
+  font-size: 80px;
+  margin: 20px 0;
+}
+
+#mailImg {
+  width: 160px;
+  margin: 20px 0;
+}
+
+/* YES NO ROW */
+.btn-row {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+#yesBtn, #noBtn {
+  min-width: 130px;
+}
+
+/* PAGE 4 IMAGE */
+#slideImage {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0;
+}
+
+/* ANIMATIONS */
+.slide-in {
+  animation: slideDown 2s ease forwards;
+}
+
+@keyframes slideDown {
+  from { top: -100%; opacity: 0; }
+  to { top: 0; opacity: 1; }
+}
+
+.fade-out {
+  animation: fadeOut 1.5s ease forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* CONFETTI */
+.confetti {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  top: -10px;
+  animation: fall 3s linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
