@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For My Jiji 💜</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- PAGE 1 : COUNTDOWN -->
+<div class="page active" id="page1">
+  <div id="countdown">5</div>
+</div>
+
+<!-- PAGE 2 : HAPPY BIRTHDAY -->
+<div class="page" id="page2">
+  <h1>🎂 Happy Birthday</h1>
+  <h2>meri 2nd pyari jiji 💜</h2>
+  <button onclick="goToPage(3)">Next 💜</button>
+</div>
+
+<!-- PAGE 3 : MAIL -->
+<div class="page" id="page3">
+  <h3>a smol message for you by your best and bestest chota bhai 💜</h3>
+
+  <div id="mailIcon">✉️</div>
+  <img id="mailImg" src="mailtosis.png" style="display:none;" />
+
+  <p id="mailText">Do you wanna open it? 👀</p>
+
+  <div class="btn-row">
+    <button id="yesBtn" onclick="yesClick()">YES 💌</button>
+    <button id="noBtn" onclick="noClick()">NO 😤</button>
+  </div>
+
+  <button id="openNextBtn" style="display:none;" onclick="goToPage(4)">
+    Next 💜
+  </button>
+</div>
+
+<!-- PAGE 4 : IMAGE SLIDE -->
+<div class="page" id="page4">
+  <img src="iluvmyjiji.png" id="slideImage" />
+  <button id="finalNextBtn" style="display:none;" onclick="goToPage(5)">
+    Next 💜
+  </button>
+</div>
+
+<!-- PAGE 5 : FINAL -->
+<div class="page" id="page5">
+  <h1>💖</h1>
+  <h2>
+    I promise I’ll get you your gift<br>
+    by the end of this week 😄🎁<br><br>
+    Love you always,<br>
+    your chota bhai 💜
+  </h2>
+</div>
+
+<script src="script.js"></script>
+<audio id="bgMusic" loop>
+  <source src="bgmusic.mp3" type="audio/mpeg">
+</audio>
+</body>
+</html>
